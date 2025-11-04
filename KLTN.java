@@ -1,4 +1,4 @@
-public class KLTN<T extends Student, V extends ISupervisor> implements Comparable<KLTN<T, V>> {
+public class KLTN<T extends Student, V extends ISupervisor> implements Comparable<KLTN<?, ?>> {
     private T student;
     private V supervisor;
     private String tenDetai;
@@ -39,7 +39,7 @@ public class KLTN<T extends Student, V extends ISupervisor> implements Comparabl
                 '}';
     }
 
-    public int compareTo(KLTN<T, V> other) {
+    public int compareTo(KLTN<?, ?> other) {
         return this.tenDetai.compareTo(other.tenDetai);
     }
 }
